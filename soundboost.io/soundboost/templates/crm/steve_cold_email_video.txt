@@ -1,0 +1,16 @@
+Hi {{ first_name }},
+
+My name is Steve.  A friend and I created a tool for music blogs to easily manage and review all your song submissions.
+
+I think this could really help you at {{ organization }}.
+
+Instead of trying to explain it to you in an email, here is a 2 minute video on YouTube showing me using it:  https://youtu.be/YGMFweHFKN0 
+
+Or just give it a try yourself at https://soundboost.io
+
+We’re just getting started and it would make the world of difference to us if you could you give us a few words of feedback.  If you’d rather not, I understand. 
+
+Best Regards,
+Steve
+
+P.S. It’s free and I honestly think it will make your job a lot easier. But let me know what you think, good or bad! https://soundboost.io 

@@ -1,0 +1,20 @@
+{% extends "email/base.html" %}
+
+{% block preheader %}
+<p>Your submission to {{ organization.name }} was declined.</p>
+{% endblock %}
+
+{% block content %}
+<p>Hi {{ submitter.first_name }},</p>
+
+<p>We're sorry, but {{ organization.name }} declinced your song.</p>
+
+{% if feedback %}
+<p>Here is what {{ organization.name }} said about the song:<p>
+<blockquote>{{ feedback }}</blockquote>
+{% endif %}
+
+<p>Sincerely,
+<br/>soundboost
+</p>
+{% endblock %}

@@ -1,0 +1,16 @@
+Hi {{ first_name }}, 
+
+I was wondering how much time do you spend reviewing all the song submissions you get at {{ organization }}? I'm going to guess it's a lot. I'm genuinely interested to know if you don't mind sharing. 
+
+My name is, Steve. A friend and I just developed a free tool for music blogs that makes reviewing song submissions a lot faster and easier. 
+
+The reason for my email is that I have a request for you, {{ first_name }}:  give this new free tool a try and let us know what you think. It would make a world of difference to get your feedback. 
+
+If you’d rather not, I understand. I know you're busy listening to all these song submissions :) I appreciate you reading this far! 
+
+Here is the site: https://soundboost.io 
+
+With Gratitude, 
+Steve Rawlinson 
+
+P.S. It’s free forever and I honestly think it will make your job a lot easier. But let me know, good or bad! https://soundboost.io 

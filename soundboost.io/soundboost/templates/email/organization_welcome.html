@@ -1,0 +1,24 @@
+{% extends "email/base.html" %}
+
+{% block preheader %}
+<p>Welcome to soundboost! Important links you will need.</p>
+{% endblock %}
+
+{% block content %}
+<p>Hi {{ organization.user.first_name }},</p>
+
+<p>Welcome to soundboost!  We're excited to have you join us.</p>
+
+<p>Here are two imporant links you will need:</p>
+
+<p>Musicians can submit songs to you at:  https://soundboost.io/{{ organization.slug }}
+</p>
+
+<p>You can review songs at:  https://soundboost.io/dashboard</p>
+
+<p>We'll send you an email each day when you have new song submissions waiting to be reviewed.</p>
+
+<p>Sincerely,
+<br/>Steve and Luis
+<br/>soundboost.io</p>
+{% endblock %}

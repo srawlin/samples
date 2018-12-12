@@ -1,0 +1,16 @@
+Hi {{ organization.user.first_name }},
+
+Welcome to soundboost!  We're excited to have you join us.
+
+Here are two imporant links you will need:
+
+Musicians can submit songs to you at: https://soundboost.io/{{ organization.slug }}
+
+You can review the songs at: https://soundboost.io/dashboard
+
+We just launched our service, so if you have any quesitons or suggestions
+we'd love to hear from you.
+
+Sincerely,
+Steve and Luis
+soundboost.io

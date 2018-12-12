@@ -1,0 +1,17 @@
+Django==1.10.3
+django-extensions==1.7.4
+django-filter==0.15.3
+django-mailer==1.2.2
+django-model-utils==2.6
+django-webpack-loader==0.4.1
+djangorestframework==3.5.3
+djangorestframework-jwt==1.8.0
+flake8==3.0.4
+ipython==5.1.0
+psycopg2==2.6.2
+gunicorn==19.6.0
+ansible==2.2.0.0
+dj-database-url==0.4.1
+python-social-auth==0.2.21
+slugify==0.0.1
+stripe==1.43.0

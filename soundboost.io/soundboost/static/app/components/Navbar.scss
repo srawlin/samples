@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.Navbar {
+  .navbar-default {
+    background-color: $main-color;
+    border: none;
+    border-radius: 0px;
+    color: #333;
+    margin-bottom: 0px;
+
+    .navbar-brand {
+      color: #fff;
+      font-family: "Audiowide", cursive;
+      font-size: 26px;
+      padding: 3px 0px 0px 0px;
+      img {
+        height: 100%;
+      }
+    }
+
+    .navbar-brand:hover {
+      color: #fff;
+    }
+  }
+}

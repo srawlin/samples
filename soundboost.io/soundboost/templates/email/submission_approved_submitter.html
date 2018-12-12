@@ -1,0 +1,24 @@
+{% extends "email/base.html" %}
+
+{% block preheader %}
+<p>Congrats! Your song submission to {{ organization.name }} was approved.</p>
+{% endblock %}
+
+{% block content %}
+<p>Hi {{ submitter.first_name }},</p>
+
+<p>Congratulations!  The song you submitted to {{ organization.name }} has been approved.</p>
+{% if feedback %}
+<p>Here is what {{ organization.name }} said about the song:
+{% for comment in feedback %}
+<br/>[{{comment.created_by.first_name}}]: {{ comment.text }}
+{% endfor %}
+</p>
+{% endif %}
+<p>If you'd like to follow-up with {{ organization.name }} you can contact
+them at {{ organization.user.email }}.</p>
+
+<p>Sincerely,
+<br/>soundboost
+</p>
+{% endblock %}

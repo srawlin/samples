@@ -1,0 +1,11 @@
+Hi {{ submitter.first_name }},
+
+We're sorry, but {{ organization.name }} declinced your song.
+
+{% if feedback %}
+Here is what {{ organization.name }} said about the song:
+{{ feedback }}
+{% endif %}
+
+Sincerely,
+soundboost

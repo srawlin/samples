@@ -1,0 +1,10 @@
+Hi {{ organization.user.first_name }},
+
+You approved this song by {{ submitter.get_full_name }}:
+{{ song.get_url }}
+
+If you'd like to follow-up with {{ submitter.first_name }} you can
+contact them at {{ submitter.email }}.
+
+Sincerely,
+Soundboost

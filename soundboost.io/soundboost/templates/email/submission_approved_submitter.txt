@@ -1,0 +1,14 @@
+Hi {{ submitter.first_name }},
+
+Congratulations!  The song you submitted to {{ organization.name }} has been approved.
+{% if feedback %}
+Here is what {{ organization.name }} said about the song:
+{% for comment in feedback %}
+[{{comment.created_by.first_name}}]: {{ comment.text }}
+{% endfor %}
+{% endif %}
+If you'd like to follow-up with {{ organization.name }} you can contact
+them at {{ organization.user.email }}.
+
+Sincerely,
+soundboost

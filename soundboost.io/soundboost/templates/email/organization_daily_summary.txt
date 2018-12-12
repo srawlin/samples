@@ -1,0 +1,8 @@
+Hi {{ organization.user.first_name }},
+
+You have {{ new_count }} new song submission{{ new_count|pluralize }} in the past day.
+
+You can review the songs at: https://soundboost.io/dashboard
+
+Sincerely,
+soundboost

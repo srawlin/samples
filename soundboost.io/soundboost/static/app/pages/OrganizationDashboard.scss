@@ -1,0 +1,27 @@
+.OrganizationDashboard {
+
+  .header {
+    .dropdown {
+      margin-left: 15px;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
+  .submission {
+    margin: 10px 0px 10px 0px;
+    font-family: 'Raleway', sans-serif;
+  }
+  .is-paid {
+    background-color: #c4b120;
+    box-shadow: 0 2px 0 #887d20;
+    color: #fff;
+  }
+}
+.modal-content {
+  background-color: #EDEFF0 !important;
+}
+.comment-textarea {
+  resize: none;
+  min-height: 70px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.33) !important;
+  border: none;
+}

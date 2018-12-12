@@ -1,0 +1,97 @@
+.OrganizationProfile {
+
+  .OrganizationHeader {
+    background-color: #0079bf;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .statistics-list {
+    list-style: none;
+    font-size: 20px;
+    margin-left: -80px;
+    margin-right: -40px;
+    padding-left: 60px;
+
+    span {
+      display: block;
+      font-family: 'Raleway', sans-serif;
+      margin: 40px 0px 40px 0px;
+      padding: 10px;
+      padding-bottom: 40px;
+      text-align: center;
+
+      i {
+        font-size: 50px;
+        margin-right: 15px;
+        margin-bottom: 40px;
+        display:block;
+        text-align:center;
+      }
+    }
+  }
+
+
+  .clear {
+    clear: both;
+  }
+
+  .header {
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: center;
+    h1 {
+     font-size: 45px;
+     color: #fff;
+    }
+  }
+
+  .song-url-input {
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  .url-input-loading-icon {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .supported-formats {
+    padding: 10px;
+    text-align: center;
+    img {
+      margin: 10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .statistics {
+    .box {
+      margin: 10px;
+      padding: 10px;
+      border: solid 1px #ccc;
+      border-radius: 10px;
+      text-align:center;
+
+      .title {
+        font-size: 10px;
+        display:block;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        font-size: 30px;
+        display: block;
+      }
+    }
+  }
+
+  .song-buttons {
+    text-align: center;
+    button {
+      margin: 10px;
+    }
+  }
+}

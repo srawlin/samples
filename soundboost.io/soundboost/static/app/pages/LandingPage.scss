@@ -1,0 +1,83 @@
+@import "../../styles/variables";
+
+.LandingPage {
+
+  button {
+    font-size: 18px;
+    padding: .4em 1.3em;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  }
+
+  padding: 0px !important;
+  .header {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+    background-color: $main-color;
+    height: 80px;
+    .logo-img {
+      height: 100%;
+    }
+
+    .right-buttons {
+      float: right;
+      display: inline-block;
+      line-height: 60px;
+    }
+  }
+
+  .about {
+    margin-top: 80px;
+    background-color: $main-color;
+    color: #fff;
+    padding: 40px;
+
+    .desc-text {
+      text-align: center;
+      padding: 20px;
+      h1 {
+        color: #fff;
+      }
+    }
+  }
+
+  .content-section {
+    padding: 30px;
+    h1, h2, h3, h4, h5 {
+      color: #fff;
+    }
+
+    .text-container {
+      display: inline-block;
+      color: #fff;
+    }
+
+    .img-container {
+      text-align: center;
+      img {
+        max-height: 300px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .organize {
+    background-color: #315989;
+  }
+
+  .monetize {
+    .img-container {
+      height: 100%;
+    }
+  }
+
+  .start-now-section {
+    margin-top: 45px;
+    text-align:center;
+    p.lead {
+      font-size: 22px;
+    }
+  }
+
+}

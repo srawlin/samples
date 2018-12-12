@@ -1,0 +1,117 @@
+@import "variables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-control {
+  height: 40px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Palanquin Dark', sans-serif;
+  color: #4D4D4D;
+}
+
+.btn {
+  padding: .6em 1.3em;
+  border-radius: .3em;
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 16px;
+  border: 0px;
+  background-color: #e2e4e6;
+  color: #4d4d4d;
+  box-shadow: 0 2px 0 #cdd2d4;
+  // box-shadow: 0 2px 0 #4d4d4d;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: solid 1px #2780f8;
+}
+
+.form-group {
+  font-family: 'Raleway', sans-serif;
+}
+
+.btn-success {
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: #fff;
+}
+
+.btn-danger {
+  background: linear-gradient(to bottom, #EF7564 0, #CF513D 100%);
+  color: #fff;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #0d89d1 0, #0d6ba2 100%);
+  color: #fff;
+}
+
+.btn-light {
+  background: transparent;
+  border: solid 1px #ccc;
+  box-shadow: none;
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px 10px;
+}
+
+.btn-light:hover {
+  color: #337ab7;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #1177b2 0, #0c5b89 100%);
+}
+
+.btn-default {
+  
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+p.lead {
+  font-size: 19px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.modal-content {
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+}
+
+.error-message {
+  color: #a94442;
+}
+
+.dropdown {
+  .dropdown-menu {
+    padding: 5px 7px;
+    li {
+      a {
+        border-radius: 5px;
+      }
+      a:hover {
+        color: #fff;
+        background-color: #3aa3e3;
+      }
+    }
+  }
+}

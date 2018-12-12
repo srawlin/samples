@@ -1,0 +1,16 @@
+{% extends "email/base.html" %}
+
+{% block preheader %}
+<p>You have {{ new_count }} new song submission{{ new_count|pluralize }} in the past day.</p>
+{% endblock %}
+
+{% block content %}
+<p>Hi {{ organization.user.first_name }},</p>
+
+<p>You have {{ new_count }} new song submission{{ new_count|pluralize }} in the past day.</p>
+
+<p>You can review the songs in your <a href="https://soundboost.io/dashboard">soundboost dashboard</a>.
+
+<p>Sincerely,
+<br/>soundboost</p>
+{% endblock %}

@@ -1,0 +1,7 @@
+venv
+node_modules
+dist
+webpack-stats.*
+*.pyc
+.DS_Store
+deploy.retry
