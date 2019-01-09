@@ -1,3 +1,14 @@
+
+Website for muscians to promte their songs.  We ran it for a few months, but didn't get traction so it was shutdown.
+
+Co-developed with Luis Del Guidice.  We each wrote 50% of the code.
+
+## Architecture
+
+Back-end:  Django / Python
+
+Front-end:  React.js
+
 ## Requirements:
 
 * Node version 4.5

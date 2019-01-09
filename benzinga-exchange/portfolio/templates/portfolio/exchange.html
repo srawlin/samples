@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block title %}Steve's Simple Stock Exchange{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+{% if valid_symbol %}
+   <h2>{{company_name}} ({{ symbol|upper }})</h2>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading"><b>Buy {{company_name}} ({{ symbol|upper }})</b></div>
+				<div class="panel-body">
+				    <form action="" method="post">
+						<p>Ask Price: ${{ ask_price |floatformat:"2" }}</p>
+						<input id="id_symbol" name="symbol" type="hidden" value="{{ symbol }}" />
+						<p><label for="id_quantity">Quantity:</label> <input id="id_quantity" name="quantity" type="number" />{{ form.quantity.errors }}</p>
+						<input id="id_order_type" name="order_type" type="hidden" value="buy" />
+					
+        {% csrf_token %}
+        <input type="submit" value=" Buy " class="btn btn-success">
+					</form>
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading"><b>Sell {{company_name}} ({{ symbol | upper}})</b></div>
+				<div class="panel-body">
+				    <form action="" method="post">
+						<p>Bid Price: ${{ bid_price |floatformat:"2" }}</p>
+						<input id="id_symbol" name="symbol" type="hidden" value="{{ symbol }}" />
+						<p><label for="id_quantity">Quantity:</label> <input id="id_quantity" name="quantity" type="number" />{{ form.quantity.errors }}</p>
+						<input id="id_order_type" name="order_type" type="hidden" value="sell" />
+						{% csrf_token %}
+						<input type="submit" value=" Sell " class="btn btn-success">
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+
+<div class="row" style="height:600px;">
+<h2>Real-time Chart and News</h2>
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "autosize": true,
+  "symbol": "{{ symbol }}",
+  "interval": "D",
+  "timezone": "exchange",
+  "theme": "White",
+  "style": "1",
+  "toolbar_bg": "#f1f3f6",
+  "details": true,
+  "news": [
+    "stocktwits",
+    "headlines"
+  ],
+  "hideideas": true,
+  "show_popup_button": true,
+  "popup_width": "1000",
+  "popup_height": "650"
+});
+</script>
+<!-- TradingView Widget END -->
+</div>
+
+{% else %}
+	{% if symbol %}
+    <p>Sorry, the symbol {{ symbol }} was not found.
+    {% else %}
+    <p>Missing symbol.
+    {% endif %}
+    
+    <br/>Use the <b>Lookup</b> above to find a stock.</p>
+{% endif %}
+
+
+
+{% endblock %}
+
+
+{% block rightside %}
+		<div class="row">
+			<div class="col-md-6">
+        		<h2>Current Portfolio</h2>
+        	</div>
+        	<div class="col-md-6">
+        		<h2>Cash: 
+        		{{ user.userprofile.balance|floatformat:"2" }}</h2>
+        	</div>
+        </div>
+        
+		<div class="row">
+			<div class="panel panel-default">
+		
+			{% if stock_list %}
+				<!-- Table -->
+				<table class="table">
+					<thead>
+						<tr>
+						<th>Company</th>
+						<th>Quantity</th>
+						<th>Price Paid</th>
+						<th>Book Value</th>
+						<th></th>
+					</thead>
+					<tbody>
+					{% for stock in stock_list %}
+					<tr>
+						<td>{{ stock.company_name }}</td>
+						<td>{{ stock.quantity|floatformat:"0" }}</td>
+						<td>${{ stock.price_paid|floatformat:"2" }}</td>
+						<td>${% widthratio stock.price_paid 1 stock.quantity %}</td>
+						<td><a class="btn btn-default" href="{% url 'exchange' stock.symbol %} " role="button">View Stock &raquo;</a></td>
+					</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			{% else %}
+				<p>Sorry, no stocks in your portfolio.</p>
+				<p>Use <b>Lookup</b> to find a stock and then <b>buy</b> it.</p>
+				<p>Here are some suggestions: <a href="/portfolio/f/">Ford</a> and <a href="/portfolio/goog/">Google</a>.
+			{% endif %}
+				
+			</div>
+		</div>
+
+{% endblock %}

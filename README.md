@@ -1,17 +1,7 @@
 Code Samples Written by Steve Rawlinson
 =======================================
 
-Some examples of code I've written
-
-
-A CryptoCurrency Trading Library
---------------------------------
-
-A market maker that profits from the order book spread.
-
-Support for Bittrex.
-
-Other exchanges are under development.
+Some examples of code that I've written recently
 
 
 Soundboost.io
@@ -25,4 +15,12 @@ React JS Code Samples
 
 Some sample React code 
 
+benzinga-exchange
+-----------------
 
+Code challenge using Python / Django
+
+waldo-srawlin
+-------------
+
+Code challenge using Python, Django, Celery, OpenCV (for image processing)
